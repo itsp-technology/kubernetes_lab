@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod02
+
+spec:
+  containers:
+    - name : test
+      image: centos:7
+    - name: test2
+      image: nginx
