@@ -6,5 +6,6 @@ spec:
   containers:
     - name : ping
       image: vk786/ping:v1
+      command: ["echo"]
       args:
         - yahoo.com
