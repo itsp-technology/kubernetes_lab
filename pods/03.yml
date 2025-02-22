@@ -4,4 +4,6 @@ metadata:
   name: pod03
 spec:
   containers:
-    - 
+    - name : ping
+      image: vk786/ping:v1
+      
