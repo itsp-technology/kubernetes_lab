@@ -6,6 +6,6 @@ metadata:
 spec:
   containers:
     - name : test
-      image: centos:7
+      image: vk786/test
     - name: test2
       image: nginx
