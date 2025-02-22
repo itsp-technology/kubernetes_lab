@@ -57,7 +57,9 @@ resource "aws_security_group" "minikube_sg" {
 
 # EC2 instance with Minikube and kubectl installation
 resource "aws_instance" "minikube" {
-  ami                    = data.aws_ami.amazon_linux.id
+  #In the Terraform configuration, the AMI ID is not
+  #explicitly passed as a hardcoded value but is dynamically fetched using the aws_ami data source.
+  ami                    = data.aws_ami.amazon_linux.id #  ami = "ami-0c55b159cbfafe1f0"  we can pass hardcode as well other we can get latest one form aws
   instance_type          = "t2.medium"              # Fixed as requested
   subnet_id              = "subnet-0c9e45bc56dcf63e4" # Replace with your subnet ID
   vpc_security_group_ids = [aws_security_group.minikube_sg.id]
