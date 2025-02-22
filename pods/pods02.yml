@@ -5,7 +5,8 @@ metadata:
 
 spec:
   containers:
-    - name : test
-      image: vk786/test
-    - name: test2
+    - name : nginx
       image: nginx
+    - name: centos
+      image: centos:7
+      command: ["sleep","10000"]
