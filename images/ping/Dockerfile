@@ -1,3 +1,3 @@
 FROM centos
-CMD [ "google.com" ]
+CMD [ "yahoo.com" ]
 ENTRYPOINT [ "ping", "-c30" ]
