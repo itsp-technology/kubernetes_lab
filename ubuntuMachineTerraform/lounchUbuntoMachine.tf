@@ -3,6 +3,11 @@ provider "aws" {
   region = "us-east-1" # Customize this as needed
 }
 
+# create random security group id 
+resource "random_id" "sg_suffix" {
+  byte_length = 4
+}
+
 # Data source to fetch the latest Ubuntu 22.04 LTS AMI
 data "aws_ami" "ubuntu" {
   most_recent = true
@@ -26,7 +31,8 @@ data "aws_ami" "ubuntu" {
 
 # Security group for the EC2 instance
 resource "aws_security_group" "minikube_sg" {
-  name        = "minikube-sg"
+ # name        = "minikube-sg"
+  name = "minikube-sg-${random_id.sg_suffix.hex}"
   description = "Security group for Minikube EC2 instance"
 
   ingress {
@@ -52,6 +58,10 @@ resource "aws_security_group" "minikube_sg" {
 
   tags = {
     Name = "minikube-sg"
+  }
+
+  lifecycle {
+    create_before_destroy = true
   }
 }
 
