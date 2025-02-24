@@ -75,3 +75,16 @@ spec:
             configMapKeyRef: 
               key: APP_VERSION
               name: project-info
+
+---
+apiVersion: v1
+kind: Pod 
+metadata:
+  name: testpod
+spec:
+  containers:
+    - name: appace2
+      image: vk786/configmap:v1
+      envFrom:
+        - configMapRef:
+          name: project-info
