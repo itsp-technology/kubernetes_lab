@@ -7,6 +7,8 @@ metadata:
     batchName : "JavaDevs"
     tranerName : "vivek"
     fee : "10000"
+  annotations:
+      imageregistry : "http://hub.docker.com"
 spec:
   containers:
     - name : centos
