@@ -90,5 +90,4 @@ spec:
           value: "apache"
         - name: SOFTWARE_VERSION
           value: "2.4"
-        - name: APP_VERSION
-          value: "1.0"         
+       
