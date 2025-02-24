@@ -80,10 +80,10 @@ spec:
 apiVersion: v1
 kind: Pod 
 metadata:
-  name: testpod
+  name: pod03
 spec:
   containers:
-    - name: appace2
+    - name: apache2
       image: vk786/configmap:v1
       envFrom:
         - configMapRef:
