@@ -1,180 +1,93 @@
----
-apiVersion: v1 
-kind: ConfigMap
-metadata:
-  name : project-info
-data:
-  APP_NAME: demo
-  PROJECT_NAME: Test
-  ENVIRONMENT: DEV
-  CLOUD: AWS
-  REGION: USA
-  IS_VPC: "true"
-  COMPONENT: "httpd"
-  SOFTWARE: "apache"
-  SOFTWARE_VERSION: "2.4"
-  APP_VERSION: "1.0"
-
-
----
 apiVersion: v1 
 kind: Pod 
 metadata:
-  name : proj01
+  name : env1
+
 spec:
   containers:
     - name : apache2
       image : vk786/configmap:v1
       env: 
-        - name : APP_NAME
-          valueFrom: 
-            configMapKeyRef: 
-              key : APP_NAME
-              name : project-info
+        - name: APP_NAME
+          value: demo
         - name : PROJECT_NAME
-          valueFrom: 
-            configMapKeyRef: 
-              key : PROJECT_NAME
-              name : project-info
-        - name : ENVIRONMENT
-          valueFrom: 
-            configMapKeyRef: 
-              key : ENVIRONMENT
-              name : project-info
-        - name : CLOUD
-          valueFrom: 
-            configMapKeyRef: 
-              key : CLOUD
-              name : project-info
-        - name : REGION
-          valueFrom: 
-            configMapKeyRef: 
-              key : REGION
-              name : project-info
-        - name : IS_VPC
-          valueFrom: 
-            configMapKeyRef: 
-              key : IS_VPC
-              name : project-info
-        - name : COMPONENT
-          valueFrom: 
-            configMapKeyRef: 
-              key : COMPONENT
-              name : project-info
-        - name : SOFTWARE
-          valueFrom: 
-            configMapKeyRef: 
-              key : SOFTWARE
-              name : project-info
-        - name : SOFTWARE_VERSION
-          valueFrom: 
-            configMapKeyRef: 
-              key : SOFTWARE_VERSION
-              name : project-info
-        - name : APP_VERSION
-          valueFrom:
-            configMapKeyRef: 
-              key : APP_VERSION
-              name : project-info
-
-
-
-
-
+          value : Test
+        - name: ENVIRONMENT
+          value: DEV
+        - name: CLOUD
+          value: AWS
+        - name: REGION
+          value: USA
+        - name: IS_VPC
+          value: "true"
+        - name: COMPONENT
+          value: "httpd"
+        - name: SOFTWARE
+          value: "apache"
+        - name: SOFTWARE_VERSION
+          value: "2.4"
+        - name: APP_VERSION
+          value: "1.0"
 
 ---
+apiVersion: v1 
+kind: Pod 
+metadata:
+  name : env2
 
-
-# apiVersion: v1 
-# kind: Pod 
-# metadata:
-#   name : env1
-
-# spec:
-#   containers:
-#     - name : apache2
-#       image : vk786/configmap:v1
-#       env: 
-#         - name: APP_NAME
-#           value: demo
-#         - name : PROJECT_NAME
-#           value : Test
-#         - name: ENVIRONMENT
-#           value: DEV
-#         - name: CLOUD
-#           value: AWS
-#         - name: REGION
-#           value: USA
-#         - name: IS_VPC
-#           value: "true"
-#         - name: COMPONENT
-#           value: "httpd"
-#         - name: SOFTWARE
-#           value: "apache"
-#         - name: SOFTWARE_VERSION
-#           value: "2.4"
-#         - name: APP_VERSION
-#           value: "1.0"
-
-# ---
-# apiVersion: v1 
-# kind: Pod 
-# metadata:
-#   name : env2
-
-# spec:
-#   containers:
-#     - name : apache2
-#       image : vk786/configmap:v1
-#       env: 
-#         - name: APP_NAME
-#           value: demo
-#         - name : PROJECT_NAME
-#           value : Test
-#         - name: ENVIRONMENT
-#           value: DEV
-#         - name: CLOUD
-#           value: AWS
-#         - name: REGION
-#           value: USA
-#         - name: IS_VPC
-#           value: "true"
-#         - name: COMPONENT
-#           value: "httpd"
-#         - name: SOFTWARE
-#           value: "apache"
-#         - name: SOFTWARE_VERSION
-#           value: "2.4"
-#         - name: APP_VERSION
-#           value: "1.0"
+spec:
+  containers:
+    - name : apache2
+      image : vk786/configmap:v1
+      env: 
+        - name: APP_NAME
+          value: demo
+        - name : PROJECT_NAME
+          value : Test
+        - name: ENVIRONMENT
+          value: DEV
+        - name: CLOUD
+          value: AWS
+        - name: REGION
+          value: USA
+        - name: IS_VPC
+          value: "true"
+        - name: COMPONENT
+          value: "httpd"
+        - name: SOFTWARE
+          value: "apache"
+        - name: SOFTWARE_VERSION
+          value: "2.4"
+        - name: APP_VERSION
+          value: "1.0"
           
-# ---
-# apiVersion: v1 
-# kind: Pod 
-# metadata:
-#   name : env3
+---
+apiVersion: v1 
+kind: Pod 
+metadata:
+  name : env3
 
-# spec:
-#   containers:
-#     - name : apache2
-#       image : vk786/configmap:v1
-#       env: 
-#         - name: APP_NAME
-#           value: demo
-#         - name : PROJECT_NAME
-#           value : Test
-#         - name: ENVIRONMENT
-#           value: DEV
-#         - name: CLOUD
-#           value: AWS
-#         - name: REGION
-#           value: USA
-#         - name: IS_VPC
-#           value: "true"
-#         - name: COMPONENT
-#           value: "httpd"
-#         - name: SOFTWARE
-#           value: "apache"
-#         - name: SOFTWARE_VERSION
-#           value: "2.4"
+spec:
+  containers:
+    - name : apache2
+      image : vk786/configmap:v1
+      env: 
+        - name: APP_NAME
+          value: demo
+        - name : PROJECT_NAME
+          value : Test
+        - name: ENVIRONMENT
+          value: DEV
+        - name: CLOUD
+          value: AWS
+        - name: REGION
+          value: USA
+        - name: IS_VPC
+          value: "true"
+        - name: COMPONENT
+          value: "httpd"
+        - name: SOFTWARE
+          value: "apache"
+        - name: SOFTWARE_VERSION
+          value: "2.4"
        
