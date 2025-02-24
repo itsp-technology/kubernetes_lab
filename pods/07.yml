@@ -1,7 +1,7 @@
 apiVersion: v1 
 kind: Pod 
 metadata:
-  name : env
+  name : env1
 
 spec:
   containers:
@@ -28,3 +28,67 @@ spec:
           value: "2.4"
         - name: APP_VERSION
           value: "1.0"
+
+---
+apiVersion: v1 
+kind: Pod 
+metadata:
+  name : env2
+
+spec:
+  containers:
+    - name : apache2
+      image : vk786/configmap:v1
+      env: 
+        - name: APP_NAME
+          value: demo
+        - name : PROJECT_NAME
+          value : Test
+        - name: ENVIRONMENT
+          value: DEV
+        - name: CLOUD
+          value: AWS
+        - name: REGION
+          value: USA
+        - name: IS_VPC
+          value: "true"
+        - name: COMPONENT
+          value: "httpd"
+        - name: SOFTWARE
+          value: "apache"
+        - name: SOFTWARE_VERSION
+          value: "2.4"
+        - name: APP_VERSION
+          value: "1.0"
+          
+---
+apiVersion: v1 
+kind: Pod 
+metadata:
+  name : env3
+
+spec:
+  containers:
+    - name : apache2
+      image : vk786/configmap:v1
+      env: 
+        - name: APP_NAME
+          value: demo
+        - name : PROJECT_NAME
+          value : Test
+        - name: ENVIRONMENT
+          value: DEV
+        - name: CLOUD
+          value: AWS
+        - name: REGION
+          value: USA
+        - name: IS_VPC
+          value: "true"
+        - name: COMPONENT
+          value: "httpd"
+        - name: SOFTWARE
+          value: "apache"
+        - name: SOFTWARE_VERSION
+          value: "2.4"
+        - name: APP_VERSION
+          value: "1.0"         
