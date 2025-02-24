@@ -6,7 +6,7 @@ metadata:
 spec:
   containers:
     - name : apache2
-      images : vk786/configmap:v1
+      image : vk786/configmap:v1
       env: 
         - name: APP_NAME
           value: demo
