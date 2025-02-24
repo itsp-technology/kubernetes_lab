@@ -1,10 +1,10 @@
 apiVersion: v1 
 kind: Pod 
 metadata:
-  name : labelpod
-  lables:
-    batchId : 1
-    batchName : "JavaDev"
+  name : labelpod212312
+  labels:
+    batchId : "`1"
+    batchName : "JavaDevs"
     tranerName : "vivek"
     fee : "10000"
 spec:
