@@ -87,4 +87,5 @@ spec:
       image: vk786/configmap:v1
       envFrom:
         - configMapRef:
-          name: project-info
+            name: project-info
+        
