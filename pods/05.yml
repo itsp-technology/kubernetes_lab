@@ -14,3 +14,20 @@ spec:
         limits:
           cpu: "200m"
           memory: "400Mi"
+---
+apiVersion: v1
+kind: Pod 
+metadata:
+  name: resource
+
+spec:
+  containers:
+    - name : centos
+      image: centos:7
+      command:
+        - sleep
+        - "10000"
+      resources:
+        limits:
+            cpu:  "1000m"
+            memory: "2024Mi"
