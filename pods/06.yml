@@ -1,0 +1,16 @@
+apiVersion: v1 
+kind: Pod 
+metadata:
+  name : labelpod
+  lables:
+    batchId : 1
+    batchName : "JavaDev"
+    tranerName : "vivek"
+    fee : "10000"
+spec:
+  containers:
+    - name : centos
+      image: centos:7
+      command:
+        - sleep
+        - "10000"
