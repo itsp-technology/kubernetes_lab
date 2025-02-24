@@ -27,7 +27,55 @@ spec:
       image : vk786/configmap:v1
       env: 
         - name : APP_NAME
-          value : TestApp01
+          valueFrom: 
+            configMapKeyRef: 
+              key : APP_NAME
+              name : project-info
+        - name : PROJECT_NAME
+          valueFrom: 
+            configMapKeyRef: 
+              key : PROJECT_NAME
+              name : project-info
+
+        - name : ENVIRONMENT
+          valueFrom: 
+            configMapKeyRef: 
+              key : ENVIRONMENT
+              name : project-info
+        - name : CLOUD
+          valueFrom: 
+            configMapKeyRef: 
+              key : CLOUD
+              name : project-info
+        - name : REGION
+          valueFrom: 
+            configMapKeyRef: 
+              key : REGION
+              name : project-info
+        - name : IS_VPC
+          valueFrom: 
+            configMapKeyRef: 
+              key : IS_VPC
+              name : project-info
+        - name : COMPONENT
+          valueFrom: 
+            configMapKeyRef: 
+              key : COMPONENT
+              name : project-info
+        - name : SOFTWARE
+          valueFrom: 
+            configMapKeyRef: 
+              key : SOFTWARE
+              name : project-info
+        - name : SOFTWARE_VERSION
+          valueFrom: 
+            configMapKeyRef: 
+              key : SOFTWARE_VERSION
+              name : project-info
+              
+
+
+
 
 
 
