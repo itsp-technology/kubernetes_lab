@@ -36,7 +36,6 @@ spec:
             configMapKeyRef: 
               key : PROJECT_NAME
               name : project-info
-
         - name : ENVIRONMENT
           valueFrom: 
             configMapKeyRef: 
@@ -72,7 +71,7 @@ spec:
             configMapKeyRef: 
               key : SOFTWARE_VERSION
               name : project-info
-              
+
 
 
 
