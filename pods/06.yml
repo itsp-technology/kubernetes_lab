@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name : labelpod212312
   labels:
-    batchId : "`1"
+    batchId : "1"
     batchName : "JavaDevs"
     tranerName : "vivek"
     fee : "10000"
