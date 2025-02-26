@@ -7,4 +7,4 @@ spec:
     - name: docker-hub
   containers:
     - name: centos
-      image: vk786/private-demo:v1
+      image: vk786/private-repo:v1
