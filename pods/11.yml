@@ -3,6 +3,8 @@ kind: Pod
 metadata:
   name: pullprivaterepoimage
 spec:
+  imagePullSecrets:
+    - name: docker-hub
   containers:
     - name: privatimg 
       image: vk786/private-repo:v1
