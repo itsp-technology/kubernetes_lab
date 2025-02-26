@@ -6,5 +6,5 @@ spec:
   imagePullSecrets:
     - name: docker-hub
   containers:
-    - name: centos
+    - name: mytest
       image: vk786/private-repo:v1
