@@ -1,10 +1,10 @@
-apiVersion: v1 
-kind: Pod 
+apiVersion: v1
+kind: Pod
 metadata:
-  name: pullprivaterepoimage
+  name: pod-private
 spec:
   imagePullSecrets:
     - name: docker-hub
   containers:
-    - name: privatimg 
-      image: vk786/private-repo:v1
+    - name: centos
+      image: vk786/private-demo:v1
