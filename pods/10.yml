@@ -1,0 +1,26 @@
+apiVersion: v1 
+kind: Secret 
+metadata:
+  name : mysecret
+data:
+  DB_PASS: dml2ZWsK
+
+---
+
+apiVersion: v1 
+kind: Pod 
+metadata: 
+  name: pod-secret
+spec:
+  containers:
+    - name: centos
+      image: centos:7 
+      command:
+        - sleep
+        - "10000"
+      env: 
+        - name : PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: DB_PASS
+              name: mysecret
