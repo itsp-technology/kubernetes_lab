@@ -9,7 +9,7 @@ spec:
       command:
         - sleep
         - "10000"
-      valumeMounts:
+      volumeMounts:
         - mountPath: /var/local/aaa
           name: mydir
         - mountPath: /var/local/aaa/1.txt
