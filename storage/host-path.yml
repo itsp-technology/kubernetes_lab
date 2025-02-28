@@ -14,7 +14,7 @@ spec:
           name: mydir
         - mountPath: /var/local/aaa/1.txt
           name: myfile
-  valumes:
+  volumes:
     - name: mydir
       hostPath:
           path: /var/local/aaa
