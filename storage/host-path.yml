@@ -1,0 +1,26 @@
+apiVersion: v1 
+kind: Pod 
+metadata:
+  name: hostpath-test
+spec:
+  containers:
+    - name: centos
+      image: centos:7
+      command:
+        - sleep
+        - "10000"
+      valumeMounts:
+        - mountPath: /var/local/aaa
+          name: mydir
+        - mountPath: /var/local/aaa/1.txt
+          name: myfile
+  valumes:
+    - name: mydir
+      hostPath:
+          path: /var/local/aaa
+          type: DirectoryOrCreate
+    - name: myfile
+      hostPath:
+          path: /var/local/aaa/1.txt
+          type: FileOrCreate
+
