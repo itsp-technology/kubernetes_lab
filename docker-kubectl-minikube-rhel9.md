@@ -1,5 +1,7 @@
 # 🧩 General topic for minikube
 
+line for follow https://www.linuxtechi.com/how-to-install-minikube-on-rhel/
+
 ## 1 install minikube in rhel 9 wmare
 # Install Minikube on RHEL9
 
