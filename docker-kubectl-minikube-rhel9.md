@@ -218,6 +218,8 @@ if it si running stop this
 [vivek@localhost ~]$ sudo systemctl stop firewalld
 [vivek@localhost ~]$ kubectl proxy --address='192.168.19.135' --port=8001 --accept-hosts='.*'
 
+hit this url http://192.168.19.135:8001/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/
+
 
  
 ```
